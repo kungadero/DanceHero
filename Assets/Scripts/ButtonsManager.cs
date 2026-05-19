@@ -22,7 +22,7 @@ public class ButtonsManager : MonoBehaviour
 public void HideSongButtons()
    {
         StopAllCoroutines();
-        StartCoroutine(AnimateButtons(showAnimationName));
+        StartCoroutine(AnimateButtons(hideAnimatioName));
     }  
 private IEnumerator AnimateButtons(string animationName)
     {

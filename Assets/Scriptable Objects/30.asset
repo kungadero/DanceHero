@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fdb6bfc4748c454597ed00ccfea8666, type: 3}
   m_Name: 30
   m_EditorClassIdentifier: Assembly-CSharp::SongData
+  animationName: 30
+  songName: 30
