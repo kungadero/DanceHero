@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Notes : MonoBehaviour
+public class Note : MonoBehaviour
 {
  [SerializeField]
  private float speed = 5f;

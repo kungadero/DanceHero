@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SongData
   animationName: 30
   songName: 30
+  noteChart: {fileID: 4900000, guid: 6234dad72350d5742b61cf5761b87790, type: 3}
+  speed: 300

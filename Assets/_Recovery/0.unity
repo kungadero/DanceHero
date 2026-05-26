@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 313756157}
   - component: {fileID: 313756160}
   m_Layer: 5
-  m_Name: Lane1
+  m_Name: Lane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,13 +186,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2124104165}
   - {fileID: 2020370009}
   - {fileID: 442371452}
   m_Father: {fileID: 1319372780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -215, y: 0.5}
+  m_AnchoredPosition: {x: -184, y: 0.5}
   m_SizeDelta: {x: 320, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &313756157
@@ -258,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Lane
   notesPivot: {fileID: 442371452}
-  notePrefab: {fileID: 8676177896103892831, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+  notePrefab: {fileID: 211674437426005525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
 --- !u!1 &357276894
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,19 +292,7 @@ MonoBehaviour:
   characterAnimator: {fileID: 1550749383}
   onSongStart:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1297650491}
-        m_TargetAssemblyTypeName: LaneManager, Assembly-CSharp
-        m_MethodName: ShowLanes
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onSongSelected:
     m_PersistentCalls:
       m_Calls:
@@ -394,31 +383,6 @@ MonoBehaviour:
           m_StringArgument: Idle
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1297650491}
-        m_TargetAssemblyTypeName: LaneManager, Assembly-CSharp
-        m_MethodName: HidenLanes
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Idle
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1425978076}
-        m_TargetAssemblyTypeName: NotesManager, Assembly-CSharp
-        m_MethodName: StopNotes
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Idle
-          m_BoolArgument: 0
-        m_CallState: 2
-  notesManager: {fileID: 1425978076}
 --- !u!4 &357276896
 Transform:
   m_ObjectHideFlags: 0
@@ -640,6 +604,116 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &428028695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 428028696}
+  - component: {fileID: 428028698}
+  - component: {fileID: 428028697}
+  m_Layer: 5
+  m_Name: NotesLimit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &428028696
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428028695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.46, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 583077227}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -0.5, y: 176}
+  m_SizeDelta: {x: -1, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!50 &428028697
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428028695}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &428028698
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428028695}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -16.909111}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 700, y: 212.77116}
+  m_EdgeRadius: 0
 --- !u!1 &442371451
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +828,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &583077226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 583077227}
+  m_Layer: 5
+  m_Name: 'Lanes2 '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &583077227
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583077226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.46, y: 1.46, z: 1.46}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 584747438}
+  - {fileID: 428028696}
+  m_Father: {fileID: 1225279465}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 291, y: 0.5}
+  m_SizeDelta: {x: -1, y: -1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &584747437
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +879,7 @@ GameObject:
   - component: {fileID: 584747440}
   - component: {fileID: 584747439}
   m_Layer: 5
-  m_Name: Lane2
+  m_Name: Lane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -781,18 +892,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584747437}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5817451258299798961}
   - {fileID: 730992295}
   - {fileID: 270495956}
-  m_Father: {fileID: 1319372780}
+  m_Father: {fileID: 583077227}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 205.8219, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.5}
   m_SizeDelta: {x: 320, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &584747439
@@ -808,7 +920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Lane
   notesPivot: {fileID: 270495956}
-  notePrefab: {fileID: 7649768573193107678, guid: 86619bee81183de4096df03655e6a264, type: 3}
+  notePrefab: {fileID: 211674437426005525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
 --- !u!225 &584747440
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1096,34 +1208,10 @@ MonoBehaviour:
   animationName: Check
   onNoteCheked:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1425978076}
-        m_TargetAssemblyTypeName: NotesManager, Assembly-CSharp
-        m_MethodName: AddCorrectNote
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onNoteMissed:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1425978076}
-        m_TargetAssemblyTypeName: NotesManager, Assembly-CSharp
-        m_MethodName: RemoveCorrectNote
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!50 &730992299
 Rigidbody2D:
   serializedVersion: 5
@@ -1210,7 +1298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.09920767, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.0956518, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1235,6 +1323,111 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730992294}
   m_CullTransparentMesh: 1
+--- !u!1001 &739590731
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 313756156}
+    m_Modifications:
+    - target: {fileID: 211674437426005525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_Name
+      value: BlueNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808541871900986761, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_Size.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1808541871900986761, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_Size.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 506
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,6 +2185,7 @@ RectTransform:
   - {fileID: 1341982459}
   - {fileID: 883041996}
   - {fileID: 1319372780}
+  - {fileID: 583077227}
   - {fileID: 1538958286}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2031,10 +2225,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LaneManager
   showAnimationName: Show
   hideAnimationName: Hide
-  lanes:
-  - {fileID: 313756160}
-  - {fileID: 584747439}
-  animator: {fileID: 1319372782}
+  lanes: []
+  animator: {fileID: 0}
 --- !u!4 &1297650492
 Transform:
   m_ObjectHideFlags: 0
@@ -2188,8 +2380,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1319372780}
-  - component: {fileID: 1319372782}
-  - component: {fileID: 1319372781}
   m_Layer: 5
   m_Name: Lanes
   m_TagString: Untagged
@@ -2210,7 +2400,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 313756156}
-  - {fileID: 584747438}
   - {fileID: 1782084265}
   m_Father: {fileID: 1225279465}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2219,40 +2408,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.5, y: 0.5}
   m_SizeDelta: {x: -1, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!225 &1319372781
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319372779}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!95 &1319372782
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319372779}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8a19cdc47ea8daf4788971c03ee06914, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1341982458
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,74 +2720,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414718698}
   m_CullTransparentMesh: 1
---- !u!1 &1425978075
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1425978077}
-  - component: {fileID: 1425978076}
-  m_Layer: 0
-  m_Name: NotesManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1425978076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425978075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fd539dbf2d39084ab0b32bcf5982e13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NotesManager
-  _laneManager: {fileID: 1297650491}
-  _notesCheckInterval: 0.1
-  _finishTime: 1.5
-  _onWinSong:
-    m_PersistentCalls:
-      m_Calls: []
-  _onLoseSong:
-    m_PersistentCalls:
-      m_Calls: []
-  _onFinishSong:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 590960606}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: StopMusic
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!4 &1425978077
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425978075}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -369.73703, y: 0.00002, z: 20323.21}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1480715186
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,7 +2944,6 @@ GameObject:
   - component: {fileID: 1722833359}
   - component: {fileID: 1722833358}
   - component: {fileID: 1722833357}
-  - component: {fileID: 1722833360}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: Untagged
@@ -2957,42 +3043,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1297650491}
-        m_TargetAssemblyTypeName: LaneManager, Assembly-CSharp
-        m_MethodName: HidenLanes
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1425978076}
-        m_TargetAssemblyTypeName: NotesManager, Assembly-CSharp
-        m_MethodName: StopNotes
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 905181032}
-        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: StopTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1722833358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3008,18 +3058,18 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Crisis
+  mTrackableName: kitzuragi
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1.087037
+  mAspectRatio: 1.3874346
   mImageTargetType: 3
-  mWidth: 0.18398638
+  mWidth: 0.14415094
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 743ba2b49b6801244be5dda2421771a6, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 06c63aab510780c44944c802b45e5695, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1722833360}
+  mPreview: {fileID: 0}
 --- !u!4 &1722833359
 Transform:
   m_ObjectHideFlags: 0
@@ -3036,25 +3086,6 @@ Transform:
   - {fileID: 1550749384}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1722833360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722833356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1722833358}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Crisis
-  mDatasetName: 
-  mCastedBehaviour: {fileID: 1722833358}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1 &1782084264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3066,7 +3097,6 @@ GameObject:
   - component: {fileID: 1782084265}
   - component: {fileID: 1782084267}
   - component: {fileID: 1782084266}
-  - component: {fileID: 1782084268}
   m_Layer: 5
   m_Name: NotesLimit
   m_TagString: Untagged
@@ -3166,33 +3196,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 700, y: 212.77116}
   m_EdgeRadius: 0
---- !u!114 &1782084268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782084264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac08c8a6eed5ec4fb1c96a8604f51f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NotesLimits
-  onNotesLimitReached:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1425978076}
-        m_TargetAssemblyTypeName: NotesManager, Assembly-CSharp
-        m_MethodName: AddNoteCount
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &1878742219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3592,34 +3595,10 @@ MonoBehaviour:
   animationName: Check
   onNoteCheked:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1425978076}
-        m_TargetAssemblyTypeName: NotesManager, Assembly-CSharp
-        m_MethodName: AddCorrectNote
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onNoteMissed:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1425978076}
-        m_TargetAssemblyTypeName: NotesManager, Assembly-CSharp
-        m_MethodName: RemoveCorrectNote
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!50 &2020370012
 Rigidbody2D:
   serializedVersion: 5
@@ -3787,6 +3766,113 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!224 &2124104165 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5817451257810976525, guid: fd15d1d708ef3de48a96bcfdc1ad6329, type: 3}
+  m_PrefabInstance: {fileID: 739590731}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4276251295425485978
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 584747438}
+    m_Modifications:
+    - target: {fileID: 1708123159607048953, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_Name
+      value: RedNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 506
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+--- !u!224 &5817451258299798961 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5296383109260073670, guid: 584b2315f40dacd44bbde57696a000d3, type: 3}
+  m_PrefabInstance: {fileID: 4276251295425485978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3802,4 +3888,3 @@ SceneRoots:
   - {fileID: 590960607}
   - {fileID: 905181031}
   - {fileID: 1297650492}
-  - {fileID: 1425978077}
